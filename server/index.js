@@ -20,7 +20,8 @@ const { PORT=defaultPort } = process.env;
 const startServer = ({ logger }={}) => {
     // TODO: validate dependencies
     app.use((error, req, res, next) => {
-        console.error(error);
+        logger.error(error.message);
+        logger.error(error.stack);
 
         const data = { 
             success: false,
@@ -36,7 +37,8 @@ const startServer = ({ logger }={}) => {
     
     app.listen(PORT, (error) => {
         if(error){
-            logger.error(error);
+            logger.error(error.message);
+            logger.error(error.stack);
         } else {
             logger.info(`Server started on ${PORT}`);
         }
