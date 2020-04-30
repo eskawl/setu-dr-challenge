@@ -22,10 +22,7 @@ const config = {
     "operatorsAliases": false
   },
   "production": {
-    // "username": "postgres",
-    // "password": "postgres",
-    // "database": "pulse-dev",
-    // "host": "127.0.0.1",
+    "native": true,
     "dialect": "postgres",
     "define": {
       "freezeTableName": true
