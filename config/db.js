@@ -22,7 +22,7 @@ const config = {
     "operatorsAliases": false
   },
   "production": {
-    "native": true,
+    // "native": true,
     "dialect": "postgres",
     "define": {
       "freezeTableName": true
